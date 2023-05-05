@@ -1,0 +1,146 @@
+.box{
+position:relative;
+width:250px;
+height:300px;
+display:flex;
+justify-content:center;
+align-items:center;
+background: rgba(0,0,0,0.5);
+overflow:hidden;
+}
+.box::before{
+content:"";
+position:absolute;
+width:120px;
+height:140%;
+background:linear-gradient(#fff,#fff);
+animation: animate 4s linear infinite;
+filter: blur(4px);
+}
+@keyframes animate {
+0%{
+transform: rotate(0deg);
+}
+100%{
+transform: rotate(360deg);
+}
+}
+.box::after{
+content:"";
+position:absolute;
+inset:4px;
+background:black;
+}
+.box img{
+z-index:10;
+height:280px;
+width:200px;
+}
+.section{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+align-items:center;
+}
+.container{
+display:flex;
+width:100vw;
+flex-wrap:wrap;
+justify-content:space-around;
+align-items:center;
+padding:40px 90px 40px 90px;
+}
+.text3{
+padding:30px 0 30px 0;
+font-size:1.1rem;
+width:50vw;
+color:#D3D3D3;
+}
+.rectangle{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:start;
+}
+.font{
+color:#D3D3D3;
+font-size:3rem;
+font-weight:600;
+}
+.animateFont{
+animation-duration:1s;
+animation-name:font;
+transition:1s;
+}
+@keyframes font{
+from{
+display:hidden;
+color:transparent;
+opacity:0;
+top:1rem;
+}
+to{
+color:#D3D3D3;
+opacity:1;
+top:-1rem;
+}
+}
+.animateText{
+animation-duration:1.5s;
+animation-name:text;
+transition:1s;
+}
+@keyframes text{
+from{
+display:hidden;
+color:transparent;
+opacity:0;
+top:1rem;
+}
+to{
+color:#D3D3D3;
+opacity:1;
+top:-1rem;
+}
+}
+
+
+@media only screen and (max-width: 600px) {
+.container{
+display:flex;
+width:100vw;
+flex-wrap:wrap;
+justify-content:space-around;
+align-items:center;
+padding:8px 25px 8px 25px;
+}
+.text3{
+padding:8px 0 12px 0;
+font-size:0.9rem;
+width:79vw;
+color:#D3D3D3;
+}
+.rectangle{
+display:flex;
+justify-content:center;
+align-items:center;
+width:600px;
+}
+.font{
+color:#D3D3D3;
+font-size:1.7rem;
+font-weight:600;
+}
+.box{
+position:relative;
+width:250px;
+height:300px;
+display:flex;
+justify-content:center;
+align-items:center;
+background: rgba(0,0,0,0.5);
+overflow:hidden;
+margin-bottom:20px; 
+}
+
+}
